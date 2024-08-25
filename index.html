@@ -31,8 +31,8 @@
 </head>
 <body>
    <header class="header">
-      <h2>About us</h2> 
-      <a href="#contact" class="contactUs">Contact Us</a>
+      <a href="#about">About us</a> 
+      <a href="#form" class="contactUs">Contact Us</a>
    </header>
 
    <section id="hero-d" class="hero">
@@ -45,17 +45,31 @@
       <img src="./assets/bg1.svg" alt="" class="bg1">
    </section>
 
+   <section id="hero-m" class="hero">
+         <p class="t1">Full Digital Agency</p>
+         <h1>Step into a better</h1>
+
+         <div class="flex">
+            <div class="left"><h1>Business</h1>
+               <p>We improve <span>Companies & Personal Brands</span></p></div>
+            <div class="right"><img src="./assets/916logo.svg" alt="916 Studio"></div>
+
+      </div>
+      <img src="./assets/bg1.svg" alt="" class="bg1">
+   </section>
+
    <section class="works">
    <div class="filters">
       <div class="activeFilter"></div>
-      <div class="filter active">Photography/ Videography</div>
-      <div class="filter">Graphic Design</div>
-      <div class="filter">Video Production</div>
-      <div class="filter">Media Management</div>
-      <div class="filter">Websites & UI/UX</div>
+      <div class="filter active pv" data-filter="pv">Photography/ Videography</div>
+      <div class="filter gd" data-filter="gd">Graphic Design</div>
+      <div class="filter vp" data-filter="vp">Video Production</div>
+      <div class="filter med" data-filter="med">Media Management</div>
+      <div class="filter uiux" data-filter="uiux">Websites & UI/UX</div>
    </div>
-
-   <div class="category pv">
+   <div class="categoriesWrapper">
+      
+   <div class="category pv active">
       <p class="intro">Capturing moments and products with precision, turning every shot into a story that resonates</p>
       <div class="container">
          <div class="subcat sports">
@@ -232,62 +246,100 @@
    <div class="category uiux">
       <p class="intro">Building intuitive, user-centric websites that drive engagement and deliver seamless digital experiences</p>
       <div class="container">
-         <div class="subcat">
-            <p class="title"></p>
+         <div class="subcat websites motionGraphics">
+            <p class="title">Websites</p>
             <div class="gridContainer">
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
+               <a href="#aquaMotion" >
+                  <img src="./assets/5 - Websites & UI UX/websites/boldo=landingpage.png" alt="">
+                  
                </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
+               <a href="#majorMotion">
+                  <img src="./assets/5 - Websites & UI UX/websites/polymaze.png" alt="">
                </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
+               <a href="#panttriMotion">
+                  <img src="./assets/5 - Websites & UI UX/websites/eddie-homepage.png" alt="">
                </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
+               
             </div>
          </div>
 
-         <div class="subcat">
-            <p class="title"></p>
-            <div class="gridContainer">
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-            </div>
-         </div>
+         
 
-         <div class="subcat">
-            <p class="title"></p>
-            <div class="gridContainer">
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-               <a href="./assets/1 - Photography/Product/3.jpg" data-fancybox="Photography - Products" data-caption="Products Portrait">
-                  <img src="./assets/1 - Photography/Product/3.jpg" alt="">
-               </a>
-            </div>
-         </div>
+         
       </div>
    </div>
+   </div>
    </section>
+
+   <section id="form">
+      <p class="title">Request a service</p>
+
+      <form action="https://script.google.com/macros/s/AKfycbzNjo3JsYWdeFVuOi_zn0ZlHzW0Jx4ur2ZrCqBUbPk4MSty4FqNXvdWJJ5gXZXS-sIGLg/exec" method="POST" class="form">
+         <img src="./assets/916logo white.svg" alt="916 Studio">
+
+         <div>
+            
+            <label for="fnameInp">Full Name</label>
+            <input type="text" name="full_name" id="fnameInp" placeholder="Enter your name" required>
+
+         </div>
+         <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="emailInp" placeholder="Enter your E-mail" required>
+
+         </div>
+
+         <div>
+            <label for="phone_number">Phone Number</label>
+            <input type="tel" name="phone_number" id="phoneNumInp" placeholder="(+213)" pattern="^(00213|\+213|0)(5|6|7)[0-9]{8}$" required>
+   
+         </div>
+
+         <div>
+            <label for="service">What service do you need?</label>
+            <select name="service" id="serviceInp" required>
+               <option value="select service" hidden selected>Select Service</option>
+               <option value="photography/ videography">Photography & Videography</option>
+               <option value="graphic design">Graphic Design</option>
+               <option value="video Production">Video Production</option>
+               <option value="media management">Media Management</option>
+               <option value="web dev/ UI/UX">Web Development & UI/UX</option>
+            </select>
+         </div>
+
+         <div>
+            <label for="description">Describe your need</label>
+            <textarea name="description" id="descriptionInp" min="10" rows="20"></textarea>
+         </div>
+         <button type="submit">Submit</button>
+      </form>
+   </section>
+
+   <section id="about">
+      <p class="title">About us</p>
+<div class="flex">
+   
+   <div class="left">
+      <p><b>916 Studio</b> began as two separate Instagram pages in February 2022: a photography page, <b>@916.shots</b>, and a graphic design page, <b>@916.design</b>, founded by university students Abderrahmane and Amine. Over time, the team expanded to include other creative students with expertise in various digital and audiovisual fields. Together, they built a community of freelancers capable of offering a wide range of services, ensuring both <b>high quality</b> and <b>affordable prices.</b></p>
+      <div class="flex">
+         <img src="./assets/Website/916 Shots.svg" alt="">
+         <img src="./assets/Website/916DESIGNn-01.svg" alt="">
+      </div>
+   </div>
+   <div class="right">
+      <img src="./assets/Website/about-us.jpeg" alt="">
+   </div>
+</div>
+   </section>
+
+   <footer>
+      <p class="num">
+         <span>(+213)</span> 542 48 25 07 / <span>(+213)</span> 665 47 43 75
+      </p>
+      <p class="email">
+         916studio.sd@gmail.com
+      </p>
+   </footer>
    <!-- <a href="./assets/Website/1 - Photography/Event/1.jpg" data-fancybox="gallery" data-caption="Caption #1">
       <img src="./assets/Website/1 - Photography/Event/1.jpg" alt="">
    </a> -->
@@ -330,34 +382,70 @@
    const facebookAnim = lottie.loadAnimation({
       container: document.querySelector('.facebookAnim'),
       renderer: 'svg',
-      loop: true,
+      loop: false,
       autoplay: false,
       path: './assets/4 - Media Management/facebook-2.json'
       // direction:-1
     });
-    facebookAnim.Direction = -1
-    facebookAnim.play();
-    lottie.loadAnimation({
+    document.querySelector('.facebookAnim').addEventListener('mouseenter',() => {
+      facebookAnim.setDirection(1)
+       facebookAnim.play();
+    })
+    document.querySelector('.facebookAnim').addEventListener('mouseleave',() => {
+      facebookAnim.setDirection(-1)
+       facebookAnim.play();
+    })
+
+
+   const instagramAnim = lottie.loadAnimation({
       container: document.querySelector('.instagramAnim'),
       renderer: 'svg',
-      loop: true,
-      autoplay: true,
+      loop: false,
+      autoplay: false,
       path: './assets/4 - Media Management/instagram.json'
     });
-    lottie.loadAnimation({
+    document.querySelector('.instagramAnim').addEventListener('mouseenter',() => {
+      instagramAnim.setDirection(1)
+      instagramAnim.play();
+    })
+    document.querySelector('.instagramAnim').addEventListener('mouseleave',() => {
+      instagramAnim.setDirection(-1)
+      instagramAnim.play();
+    })
+
+   const youtubeAnim = lottie.loadAnimation({
       container: document.querySelector('.youtubeAnim'),
       renderer: 'svg',
-      loop: true,
-      autoplay: true,
+      loop: false,
+      autoplay: false,
       path: './assets/4 - Media Management/youtube.json'
     });
-    lottie.loadAnimation({
+
+    document.querySelector('.youtubeAnim').addEventListener('mouseenter',() => {
+      youtubeAnim.setDirection(1)
+      youtubeAnim.play();
+    })
+    document.querySelector('.youtubeAnim').addEventListener('mouseleave',() => {
+      youtubeAnim.setDirection(-1)
+      youtubeAnim.play();
+    })
+
+
+   const websiteAnim = lottie.loadAnimation({
       container: document.querySelector('.websiteAnim'),
       renderer: 'svg',
-      loop: true,
-      autoplay: true,
+      loop: false,
+      autoplay: false,
       path: './assets/4 - Media Management/website.json'
     });
+    document.querySelector('.websiteAnim').addEventListener('mouseenter',() => {
+      websiteAnim.setDirection(1)
+      websiteAnim.play();
+    })
+    document.querySelector('.websiteAnim').addEventListener('mouseleave',() => {
+      websiteAnim.setDirection(-1)
+      websiteAnim.play();
+    })
    </script>
 </body>
 </html>
