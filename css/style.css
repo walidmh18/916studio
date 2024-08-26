@@ -9,6 +9,7 @@
    --purple: #462D80;
    --footer-n : #1E1E1E66;
    --font: 'Rubik', sans-serif;
+   --red: #dc3545;
 
    --inline-m1: clamp(3em,15vw,10em);
    --inline-m2: clamp(3em,9vw,10em);
@@ -22,10 +23,11 @@
 }
 html{
    scroll-behavior: smooth;
+   /* overflow-x: hidden; */
 }
 body{
    background: var(--wbg);
-   
+   /* overflow-x: hidden; */
 }
 
 
@@ -54,6 +56,12 @@ header a.contactUs{
 
 }
 
+header a:not(.contactUs){
+   font-weight: 700;
+   font-size: 1.5em;
+}
+
+
 span{
    color: var(--purple);
 
@@ -61,6 +69,15 @@ span{
 
 h1,p,h2,h3{
    color: var(--d2);
+}
+
+p.error{
+   color:white;
+   background: var(--red);
+   padding: 1em;
+   border: 1px solid red;
+   width: 100%;
+   display: none;
 }
 
 header,section,footer{
@@ -72,6 +89,32 @@ section.hero{
    padding: 3em  var(--inline-m2);
    position: relative;
 }
+
+section.hero .right{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+section.hero .right a{
+   font-size: 1.4em;
+   border: 1px solid var(--footer-n);
+   padding: 0.5em 1em;
+   background: #ffffff;
+   border-radius: 0.5em;
+   display: flex;
+   gap: 0.4em;
+   align-items: center;
+   transition: 0.3s;
+}
+
+section.hero .right a:hover{
+   color: #000000;
+   background: #E7E7E711;
+}
+
+
 #hero-d{
    display: flex;
    justify-content: space-between;
@@ -87,15 +130,23 @@ section.hero h1{
 section.hero p{
    font-size: 2.5em;
 }
+.bg1,.bg2,.bg3{
+   position: absolute;
+   /* filter: blur(50px); */
+   z-index: -1;
+   max-width: 80vw;
+   overflow: hidden;
+
+}
+
+.bg1 img,.bg2 img,.bg3 img{
+   max-width: 100%;
+}
 
 section.hero .bg1{
-   position: absolute;
-   left: -10%;
+   left: 0;
    top: 40vh;
    transform: translateY(-50%) scale(1.5);
-   z-index: -1;
-   filter: blur(50px);
-   max-width: 80vw;
 
 }
 section.hero#hero-d{
@@ -477,6 +528,16 @@ section.works .category.med .container .gridContainer{
 }
 
 
+section.works{
+   position: relative;
+   /* overflow-x: hidden; */
+}
+section.works .bg2{
+   right: 0;
+   top: 20%;
+   /* scale: 1.3; */
+}
+
 
 
 section#form{
@@ -484,6 +545,14 @@ section#form{
    flex-direction: column;
    align-items: center;
    padding: 5em calc(2 * var(--inline-m1));
+   position: relative;
+}
+
+section#form .bg3{
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   /* scale: 1.3; */
 }
 
 section#form form{
@@ -525,7 +594,7 @@ section#form form div{
    padding: 1em;
    border: 1px solid var(--placeholder);
    border-radius: 1em;
- 
+   resize: vertical;
    color: var(--wbg);
    font-size: 1.3em;
    font-weight: 300;
@@ -733,6 +802,10 @@ section#about .left .flex {
    section.hero .bg1{
       left: -30%;
    }
+
+   section.works .category p.intro {
+      font-size: 2em;
+   }
 }
 
 @media screen and (max-width:600px) {
@@ -791,10 +864,108 @@ section#about .left .flex {
    section#about .flex .right {
       margin: 0 2em;
    }
+   section#about .left p{
+      font-size: 1.55em;
+   }
 }
 
 @media screen and (max-width:350px) {
    section#form form {
       padding: 1em;
    }
+
+   body{
+      font-size: 9px;
+   }
+   section.hero h1{
+      font-size: 2.7em;
+   }
+   section.works .category p.intro {
+      font-size: 1.8em;
+   }
 }
+
+@media screen and (max-width:300px) {
+  
+
+   body{
+      font-size: 8px;
+   }
+   section.hero h1{
+      font-size: 2.5em;
+   }
+}
+@media screen and (max-width:200px) {
+  
+
+   body{
+      font-size: 8px;
+   }
+   section.hero h1{
+      font-size: 2.1em;
+   }
+}
+
+
+.loader{
+   background: var(--wbg);
+   width: 100vw;
+   height: 100lvh;
+   display: grid;
+   place-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+}
+.ld-ripple {
+   position: relative;
+   width: 80px;
+   height: 80px;
+ }
+ 
+ .ld-ripple div {
+   position: absolute;
+   border: 4px solid #333;
+   opacity: 1;
+   border-radius: 50%;
+   animation: ld-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+ }
+ 
+ .ld-ripple div:nth-child(2) {
+   animation-delay: -0.5s;
+ }
+ 
+ @keyframes ld-ripple {
+   0% {
+     top: 36px;
+     left: 36px;
+     width: 0;
+     height: 0;
+     opacity: 0;
+   }
+ 
+   4.9% {
+     top: 36px;
+     left: 36px;
+     width: 0;
+     height: 0;
+     opacity: 0;
+   }
+ 
+   5% {
+     top: 36px;
+     left: 36px;
+     width: 0;
+     height: 0;
+     opacity: 1;
+   }
+ 
+   100% {
+     top: 0px;
+     left: 0px;
+     width: 72px;
+     height: 72px;
+     opacity: 0;
+   }
+ }

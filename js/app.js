@@ -4,7 +4,26 @@ const categories = [...document.querySelectorAll('.category')]
 let activeFilter = document.querySelector('.filter.active')
 let filtersWhiteBg = document.querySelector('.activeFilter')
 
+const filtersContainer = document.querySelector('.filters')
+const loader = document.querySelector('.loader')
 
+
+let load = setInterval(() => {
+   if(document.readyState == "complete"){
+      setTimeout(() => {
+         loader.style.display = 'none'
+         clearLoad()
+      }, 2000)
+      window.scroll({
+         top:0,
+         left:0
+      })
+   }
+}, 100);
+
+function clearLoad(){
+   clearInterval(load)
+}
 
 filtersWhiteBg.style.width = activeFilter.offsetWidth + 'px'
 console.log(filters[1].offsetWidth);
@@ -20,6 +39,11 @@ filters.forEach(filter=>{
       filtersWhiteBg.style.width = filter.offsetWidth + 'px'
       // console.log(calcLeft(filters.indexOf(filter),filters));
       filtersWhiteBg.style.left = calcLeft(filters.indexOf(filter),filters) + 'px'
+      filtersContainer.scroll({
+         left: calcLeft(filters.indexOf(filter),filters)- 40,
+         behavior: "smooth"
+         })
+      console.log(filtersContainer.scrollX);
       filter.classList.add('active')
       let fil = filter.getAttribute('data-filter')
       console.log();
@@ -68,3 +92,17 @@ form.addEventListener("submit", e => {
 });
 
 
+
+
+const serviceSelect = document.querySelector('select#serviceInp');
+const musicNote = document.querySelector('form p.error')
+
+serviceSelect.addEventListener('change',() => {
+   let value = serviceSelect.value;
+   if (value == 'video Production') {
+      musicNote.style.display = 'block'
+   } else {
+      musicNote.style.display = 'none'
+
+   }
+})
