@@ -199,7 +199,8 @@ section.works .filters{
    overflow-x: hidden;
    border-radius: 2em;
    position: relative;
-   align-items: stretch;
+   align-items: center;
+
 }
 section.works .filters .filter{
    color: var(--wbg);
@@ -212,8 +213,10 @@ section.works .filters .filter{
    /* flex-shrink: 0; */
    /* flex: 1; */
    height: 100%;
-   
+   vertical-align: middle;
    flex-grow: 1;
+   display: grid;
+   
 }
 
 
@@ -280,6 +283,9 @@ section.works .category .container{
    box-sizing: content-box;
 }
 
+img.logo{
+   -webkit-filter: none !important;
+}
 
 .subcat{
    display: flex;
@@ -292,6 +298,7 @@ p.title{
    font-size: 1.7em;
    font-weight: 500;
    margin-bottom: 2em;
+   text-wrap: nowrap;
 }
 .gridContainer img{
    width: 100%;
@@ -844,6 +851,10 @@ section#about .left .flex {
    body{
       font-size: 11px;
    }
+
+   section.hero h1{
+      font-size: 3em;
+   }
    :root{
       --inline-m1: clamp(1em,8vw,5em);
       --inline-m2: clamp(1em,5vw,5em);
@@ -913,7 +924,7 @@ section#about .left .flex {
       font-size: 8px;
    }
    section.hero h1{
-      font-size: 2.5em;
+      font-size: 2.2em;
    }
    section.works .filters .filter {
       padding: 0.5 012em;
