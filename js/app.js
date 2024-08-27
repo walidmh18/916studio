@@ -65,14 +65,20 @@ function calcLeft(index,arr){
 
 
 // const dateInp = document.querySelector('input[name="time"]')
+// let date = new Date().toLocaleString()
+// console.log(date);
+
 
 let form = document.querySelector('form');
 let submitBtn = document.querySelector('button[type="submit"]')
+const dateInp = document.querySelector('input#time')
 form.addEventListener("submit", e => {
    submitBtn.classList.add('clicked');
    submitBtn.setAttribute('disabled', true)
+   
    e.preventDefault();
-   // dateInp.value = new Date()
+   let date = new Date().toLocaleString()
+   dateInp.value = date
 
    fetch(form.action, {
       method: "POST",
@@ -84,7 +90,7 @@ form.addEventListener("submit", e => {
 
 
    
-      window.open('/page.html', '_self');
+      window.open('./request-sent', '_self');
 
    }).catch(err => {
       window.open('../error.html', '_blank')

@@ -429,14 +429,11 @@ p.title{
 .subcat.posters .gridContainer a:nth-child(1),
 .subcat.posters .gridContainer a:nth-child(4){
    height: var(--1h);
-   background: red;
-
 }
 
 .subcat.posters .gridContainer a:nth-child(2){
 
    height: var(--2h);
-   background: blue;
    grid-row: span 2;
 
 
@@ -447,11 +444,28 @@ p.title{
 .subcat.posters .gridContainer a:nth-child(3){
 
    height: var(--2h);
-   background: blue;
    grid-row: span 2;
 }  
 
 
+
+button.clicked{
+   position: relative;
+   overflow: hidden;
+   cursor: not-allowed;
+}
+button.clicked:after{
+
+   width: 100%;
+   height: 100%;
+   content: 'loading...';
+   display: grid;
+   place-items: center;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: var(--d1);
+}
 /* posters end */
 
 /* printable start */
